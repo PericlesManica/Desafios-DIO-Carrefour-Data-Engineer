@@ -14,7 +14,7 @@ Obs.: para fazer estes desáfios utilizei o PyCharm (Community Edition)
 
 ​	Conversando com outros docentes, ela recebeu a sugestão de utilizar a seguinte tabela, relacionando as notas numéricas com as notas de conceitos:
 
-![img]()
+![img](https://github.com/PericlesManica/Desafios-DIO-Carrefour-Data-Engineer/blob/master/UOJ_167_G.png)
 
 ​	O problema é que Norminia já deu as notas no sistema numérico, e terá que converter as notas para o sistema de letras. No entanto, Norminia precisa preparar as próximas atividades educacionais para os seus alunos, e não tem tempo suficiente para fazer a conversão das notas manualmente.
 
