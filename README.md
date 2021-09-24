@@ -1,148 +1,162 @@
-# Desafios Bootcamp DIO / Cognizant
+# Desafios Bootcamp DIO / Carrefour Data Engineer
 
-​	Estes são os desafios propostos no bootcamp DIO/Cognizant, todos muito didáticos e divertidos de fazer, para os colegas devs que quiserem utilizar deve-se atentar para as diferenças de versões de atualizações entre o compilador local e o compilador da plataforma DIO, em alguns casos podem ser necessárias pequenas alterações.
+​	Estes são os desafios propostos no bootcamp DIO/Carrefour Data Engineer, todos muito didáticos e divertidos de fazer, para os colegas devs que quiserem utilizar deve-se atentar para as diferenças de versões de atualizações entre o compilador local e o compilador da plataforma DIO, em alguns casos podem ser necessárias pequenas alterações.
 
 Obs.: para fazer estes desáfios utilizei o PyCharm (Community Edition)
 
-## 1.1 - Fibonacci Fácil
-
-​	A seguinte sequência de números 0 1 1 2 3 5 8 13 21... é conhecida como série de Fibonacci. Nessa sequência, cada número, depois dos 2 primeiros, é igual à soma dos 2 anteriores. Escreva um algoritmo que leia um inteiro N (N < 46) e mostre os N primeiros números dessa série.
-
-## Entrada
-
-​	O arquivo de entrada contém um valor inteiro N (0 < N < 46).
-
-## Saída
-
-​	Os valores devem ser mostrados na mesma linha, separados por um espaço em branco. Não deve haver espaço após o último valor.
-
- 
-
-| Exemplo de Entrada | Exemplo de Saída |
-| ------------------ | ---------------- |
-| 5                  | 0 1 1 2 3        |
 
 
+## 1.1 - Notas da Prova
 
-## 1.2 - Exibindo Números Pares
+​	Norminia é uma professora e pesquisadora renomada de uma famosa Universidade do Brasil, com inúmeras prêmiações e reconhecimento internacional pelo seu trabalho. Recentemente, Norminia foi convidada para ministrar aulas em uma Universidade da Alemanhã. Mesmo falando muito bem a Língua alemã, Norminia ficou um pouco apreensiva com a responsabilidade, mas resolveu aceitar a proposta e encará-la como um bom desafio.
 
-​	Crie um programa que leia um número e mostre os números pares até esse número, inclusive ele mesmo.
+​	Os estudantes adoraram a metodologia de ensino de Norminia e tudo estava indo super bem, até o momento da aplicação da sua primeira prova. Acostumada a dar notas de 0 (zero) a 100 (cem), ela fez o mesmo na primeira prova da sua turma da Alemanhã. No entanto, os estudante acharam estranho, uma vez que na Alemanhã o sistema de notas é diferente: as notas devem ser dadas como conceitos de A a E. O conceito A é o mais alto, enquanto o conceito E é o mais baixo.
+
+​	Conversando com outros docentes, ela recebeu a sugestão de utilizar a seguinte tabela, relacionando as notas numéricas com as notas de conceitos:
+
+![img]()
+
+​	O problema é que Norminia já deu as notas no sistema numérico, e terá que converter as notas para o sistema de letras. No entanto, Norminia precisa preparar as próximas atividades educacionais para os seus alunos, e não tem tempo suficiente para fazer a conversão das notas manualmente.
+
+​	Você terá o seguinte desafio: escrever um programa que recebe uma nota no sistema numérico e determina o conceito correspondente.
 
 ## Entrada
 
-​	Você receberá 1 valor inteiro **N**, onde **N > 0**.
+​	A entrada contém um único conjunto de testes, que deve ser lido do dispositivo de entrada padrão (normalmente o teclado). A entrada contém uma única linha com um número inteiro **N** (0 ≤ **N** ≤ 100), representando uma nota de prova no sistema numérico.
 
 ## Saída
 
-​	Exiba todos os números pares até o valor de entrada, sendo um em cada linha. 
-
- 
-
-| Exemplo de Entrada | Exemplo de Saída |
-| ------------------ | ---------------- |
-| 6<br/><br/>        | 2 <br/>4 <br/>6  |
-
-
-
-## 1.3 - A Resposta de Theon
-
-​	Ramsay: *"(...) você vence se conseguir adivinhar quem eu sou e por que estou torturando você."*
-
-​	Theon deve pensar rápido e adivinhar quem é seu algoz! Entretanto, Ramsay já decidiu o que ele irá fazer depois que Theon der sua resposta.
-
-​	Theon pode dizer que seu algoz é alguma dentre **N** pessoas. Considere que as pessoas são numeradas de 1 a **N**. Se Theon responder que seu algoz é a pessoa *i*, Ramsay irá atingi-lo T*i* vezes.
-
-​	Sua tarefa é ajudar Theon a determinar qual deve ser sua resposta de forma a minimizar o número de vezes que ele será atingido.
-
-## Entrada
-
-​	A primeira linha contém um inteiro **N** (1 ≤ **N** ≤ 100). A segunda linha contém **N** inteiros T1, T2, ..., T**N** (0 ≤ Ti ≤ 20).
-
-## Saída
-
-​	Imprima uma linha contendo o número da pessoa que Theon deve dizer ser seu algoz. Se existe mais de uma resposta possível, imprima a menor.
+​	Seu programa deve imprimir, na saída padrão, uma letra (A, B, C, D, ou E em maiúsculas) representando o conceito correspondente à nota dada na entrada.
 
  
 
 | Exemplos de Entrada | Exemplos de Saída |
 | ------------------- | ----------------- |
-| 3 <br/>8 0 7        | <br/>2            |
-| 2<br/>1 1           | <br/>1            |
+| 12                  | D                 |
+| 87                  | A                 |
+| 0                   | E                 |
 
  
 
-## 2.1 - Rodízio de cavalos e carruagens
+## 1.2 - Preenchimento de Vetor I
 
-​	O rodízio de veículos de Bravoos é uma restrição à circulação de veículos na cidade. Com o propósito de melhorar as condições ambientais reduzindo a carga de poluentes na atmosfera,incluindo na região de Westeros, se consolidou como um instrumento para reduzir congestionamentos nas principais vias da cidade, nos horários de maior movimento. Nas ruas delimitadoras não é permitido o tráfego de cavalos e carruagens que estejam dentro da restrição. 	Há uma escala que determina em quais dias da semana quais veículos não podem circular. Essa escala é regida pelo último dígito da placa do animal, sendo:
-
-- Segunda-feira, digito final da placa 1 e 2
-
-- Terça-feira, digito final da placa 3 e 4
-
-- Quarta-feira, digito final da placa 5 e 6
-
-- Quinta-feira, digito final da placa 7 e 8
-
-- Sexta-feira, digito final da placa 9 e 0
-
-  Os motoristas que são flagrados violando a restrição de circulação são autuados com multa de 4 galinhas e condenados a passar 1 semana na Muralha.
+​	Você recebeu o desafio de ler um valor e criar um programa que coloque o valor lido na primeira posição de um vetor N[10]. Em cada posição subsequente, coloque o dobro do valor da posição anterior. Por exemplo, se o valor lido for 1, os valores do vetor devem ser 1,2,4,8 e assim sucessivamente. Mostre o vetor em seguida.
 
 ## Entrada
 
-​	A primeira linha de entrada representa a quantidade de testes **N** (0 <= **N** < 1000) que deverão ser considerados. As demais entradas são cadeia de caracteres com tamanho máximo **S** (1 <= **S** <= 100) que representam cada placa que deverá ser analisada, de tal forma que, cada placa fique em uma única linha de entrada. O formato esperado para uma placa veicular válida em Bravoos é "**AAA-9999**", tal que A é um caracter válido em [A-Z], e 9 um dígito numérico válido em [0-9].
+​	A entrada contém um valor inteiro **(V<=50)**.
 
 ## Saída
 
-​	O conjunto de valores válidos como saída são: SEGUNDA, TERCA, QUARTA, QUINTA e SEXTA, de acordo com a tabela de restrições predefinida, e FALHA caso a placa não apresente o padrão definido.
+​	Para cada posição do vetor, escreva "N[**i**] = **X**", onde **i** é a posição do vetor e **X** é o valor armazenado na posição **i**. O primeiro número do vetor N (N[0]) irá receber o valor de V.
 
  
 
-| Exemplos de Entrada                                      | Exemplos de Saída                             |
-| -------------------------------------------------------- | --------------------------------------------- |
-| 3 <br/>ABC-1234 <br/>XYZ-1010 <br/>AAA3333               | <br/>TERCA <br/>FRIDAY <br/>FALHA             |
-| 4 <br/>abc-1234 <br/>a-1010 <br/>ABCD-1234 <br/>AIQ-2001 | <br/>FALHA <br/>FALHA <br/>FALHA <br/>SEGUNDA |
+| Exemplo de Entrada  | Exemplo de Saída                                 |
+| ------------------- | ------------------------------------------------ |
+| 1 <br/> <br/> <br/> | N[0] = 1  <br/>N[1] = 2  <br/>N[2] = 4  <br/>... |
 
 
 
-## 2.2 - Preenchimento de Vetor III
+## 1.3 - Triângulo
 
-​	Leia um valor **X**. Coloque este valor na primeira posição de um vetor **N**[100]. Em cada posição subsequente de N (1 até 99), coloque a metade do valor armazenado na posição anterior, conforme o exemplo abaixo. Imprima o vetor **N**.
+​	 Leia 3 valores reais (A, B e C) e verifique se eles formam ou não um triângulo. Em caso positivo, calcule o perímetro do triângulo e apresente a mensagem:
+
+
+Perimetro = XX.X
+
+
+​	Em caso negativo, calcule a área do trapézio que tem A e B como base e C como altura, mostrando a mensagem
+
+
+Area = XX.X
 
 ## Entrada
 
-​	A entrada contem um valor de dupla precisão com 4 casas decimais.
+​	A entrada contém três valores reais.
 
 ## Saída
 
-​	Para cada posição do vetor **N**, escreva "N[*i*] = Y", onde *i* é a posição do vetor e **Y** é o valor armazenado naquela posição. Cada valor do vetor deve ser apresentado com 4 casas decimais.
+​	O resultado deve ser apresentado com uma casa decimal.
 
  
 
-| Exemplo de Entrada                | Exemplo de Saída                                             |
-| --------------------------------- | ------------------------------------------------------------ |
-| 200.0000<br/><br/><br/><br/><br/> | N[0] = 200.0000 <br/>N[1] = 100.0000 <br/>N[2] = 50.0000 <br/>N[3] = 25.0000 <br/>N[4] = 12.5000 <br/>... |
+| Exemplo de Entrada | Exemplo de Saída |
+| ------------------ | ---------------- |
+| 6.0 4.0 2.0        | Area = 10.0      |
+| 6.0 4.0 2.1        | Perimetro = 12.1 |
 
+ 
 
+## 2.1 - Números Ímpares
 
-## 2.3 - Preenchimento de Vetor III
-
-​	![img](https://github.com/PericlesManica/Desafios-Dio-Cognizant/blob/master/UOJ_2686.png)
-
-​	Hermione está criando um novo Vira Tempo especialmente para programadores. É impressionante as vantagens que ele oferece e o conforto pra codar que ele tem. O artefato ainda está em desenvolvimento e ele prometeu consertar os bugs e colocar uns apetrechos melhores e, em troca, pediu um sistema simples para o modo Standy Bay. O problema é que o artefato por si só sempre tem o ângulo de inclinação do Sol/Lua(de 0 a 360). Valendo um Vira Tempo, caso deseja aceitar: dada em grau da inclinação do Sol/Lua, informe em qual período do dia ele se encontra.
+​	 Leia um valor inteiro **X** (1 <= **X** <= 1000). Em seguida mostre os ímpares de 1 até **X**, um valor por linha, inclusive o **X**, se for o caso.
 
 ## Entrada
 
-​	A entrada contém um número inteiro **M** (0 ≤ **M** ≤ 360) representando o grau do Sol/Lua. Como a posição muda constantemente seu programa receberá diversos casos a cada segundo(EOF).
+​	O arquivo de entrada contém 1 valor inteiro qualquer.
 
 ## Saída
 
-​	Imprima uma saudação referente ao período do dia que ele se encontra: "Boa Tarde!!", "Boa Noite!!", "Bom Dia!!" e "De Madrugada!!".
+​	Imprima todos os valores ímpares de 1 até **X**, inclusive **X**, se for o caso.
 
  
 
-| Exemplo de Entrada                      | Exemplo de Saída                                             |
-| --------------------------------------- | ------------------------------------------------------------ |
-| 0  <br/>45  <br/>360  <br/>90  <br/>180 | Bom Dia!!  <br/>Bom Dia!!  <br/>Bom Dia!!  <br/>Boa Tarde!!  <br/>Boa Noite!! |
+| Exemplo de Entrada | Exemplo de Saída       |
+| ------------------ | ---------------------- |
+| 8<br/><br/><br/>   | 1 <br/>3 <br/>5 <br/>7 |
+
+
+
+## 2.2 - Folha de Pagamento
+
+​	 Precisamos saber quanto uma determinada empresa deve pagar para seus colaboradores, porém temos apenas a quantidade de horas trabalhadas e o valor hora. Escreva um programa que leia o número de um colaborador, seu número de horas trabalhadas, o valor que recebe por hora e calcula o salário desse colaborador. Em seguida, apresente o número e o salário do colaborador, com duas casas decimais.
+
+## Entrada
+
+​	Você receverá 2 números inteiros e 1 número com duas casas decimais, representando o número, quantidade de horas trabalhadas e o valor que o funcionário recebe por hora trabalhada.
+
+## Saída
+
+​	Exiba o número e o salário do colaborador, conforme exemplo abaixo, com um espaço em branco antes e depois da igualdade. No caso do salário, também deve haver um espaço em branco após o $.
+
+ 
+
+| Exemplos de Entrada   | Exemplos de Saída                        |
+| --------------------- | ---------------------------------------- |
+| 25 <br/>100 <br/>5.50 | NUMBER = 25 <br/>SALARY = U$ 550.00<br/> |
+| 1 <br/>200 <br/>20.50 | NUMBER = 1 <br/>SALARY = U$ 4100.00<br/> |
+| 6 <br/>145 <br/>15.55 | NUMBER = 6 <br/>SALARY = U$ 2254.75<br/> |
+
+
+
+## 2.3 - Programa para Validação de Notas
+
+​	O calendário escolar está passando bem rápido, devido a isso, as professoras de uma escola estão com dificuldade para calcular as notas dos alunos. Visando em resolver a situação, a diretora da escola contratou você para desenvolver um programa que leia as notas da primeira e da segunda avaliação de um aluno. Calcule e imprima a média semestral.
+
+​	O programa só aceitará notas válidas (uma nota válida deve pertencer ao intervalo [0,10]). Cada nota deve ser validada separadamente.
+
+​	No final deve ser impressa a mensagem “novo calculo (1-sim 2-nao)”, solicitando as professoras que informe um código (1 ou 2) indicando se ele deseja ou não executar o algoritmo novamente, (aceitar apenas os código 1 ou 2). Se for informado o código 1 deve ser repetida a execução de todo o programa para permitir um novo cálculo, caso contrário o programa deve ser encerrado.
+
+## Entrada
+
+​	O arquivo de entrada contém vários valores reais, positivos ou negativos. Quando forem lidas duas notas válidas, deve ser lido um valor inteiro **X** . O programa deve parar quando o valor lido para este **X** for igual a 2.
+
+## Saída
+
+​	Se uma nota inválida for lida, deve ser impressa a mensagem “nota invalida”. Quando duas notas válidas forem lidas, deve ser impressa a mensagem “media = ” seguido do valor do cálculo.
+
+​	Antes da leitura de **X** deve ser impressa a mensagem "novo calculo (1-sim 2-nao)" e esta mensagem deve ser apresentada novamente se o valor da entrada padrão para **X** for menor do que 1 ou maior do que 2, conforme o exemplo abaixo.
+
+​	A média deve ser impressa com dois dígitos após o ponto decimal.
+
+ 
+
+| Exemplo de Entrada                                           | Exemplo de Saída                                             |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| -3.5 <br/>3.5 <br/>11.0 <br/>10.0 <br/>4 <br/>1 <br/>8.0 <br/>9.0 <br/>2 | nota invalida <br/><br/>nota invalida <br/>media = 6.75 <br/><br/>novo calculo (1-sim 2-nao) <br/>novo calculo (1-sim 2-nao) <br/>media = 8.50 <br/>novo calculo (1-sim 2-nao) |
+
+
 
 
 
